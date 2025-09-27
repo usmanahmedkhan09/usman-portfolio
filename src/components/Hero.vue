@@ -32,15 +32,8 @@
           </div>
         </div>
         <div class="hero-image">
-          <div class="image-placeholder">
-            <div class="placeholder-content">
-              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                <circle cx="12" cy="7" r="4"></circle>
-              </svg>
-              <p>Your Photo Here</p>
-              <small>Upload your professional photo</small>
-            </div>
+          <div class="profile-image">
+            <img src="/pic.jpg" alt="Usman Farooq - Backend Software Engineer" />
           </div>
         </div>
       </div>
@@ -136,7 +129,7 @@
   align-items: center;
 }
 
-.image-placeholder {
+.profile-image {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -150,7 +143,7 @@
   overflow: hidden;
 }
 
-.image-placeholder::before {
+.profile-image::before {
   content: '';
   position: absolute;
   top: -2px;
@@ -162,24 +155,16 @@
   z-index: -1;
 }
 
-.placeholder-content {
-  text-align: center;
-  color: #64748b;
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
-.placeholder-content svg {
-  margin-bottom: 1rem;
-  color: #94a3b8;
-}
-
-.placeholder-content p {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.placeholder-content small {
-  font-size: 0.75rem;
-  color: #94a3b8;
+.profile-image:hover img {
+  transform: scale(1.05);
 }
 
 /* Animated background elements */
@@ -257,7 +242,7 @@
     justify-content: center;
   }
 
-  .image-placeholder {
+  .profile-image {
     width: 250px;
     height: 250px;
   }
